@@ -1,6 +1,6 @@
 # financeiro
 
-<--! Aqui vai ter uma badge do travis-ci !-->
+<!-- Aqui vai ter uma badge do travis-ci !-->
 
 Aplicação com o financeiro do Calango Hacker Clube
 
