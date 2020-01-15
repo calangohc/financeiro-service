@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from dashboard.models import Registros
+from rest_framework import viewsets
+from .serializers import RegistrosSerializer
 
-# Create your views here.
+
+class RegistrosViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Registros.objects.all()
+    serializer_class = RegistrosSerializer
