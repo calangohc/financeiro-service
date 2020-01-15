@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'extrator',
     'dashboard',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
