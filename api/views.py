@@ -1,11 +1,11 @@
-from dashboard.models import Registros
+from ledger.models import Ledger
 from rest_framework import viewsets
-from .serializers import RegistrosSerializer
+from .serializers import LedgerSerializer
 
 
-class RegistrosViewSet(viewsets.ModelViewSet):
+class LedgerViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    queryset = Registros.objects.all()
-    serializer_class = RegistrosSerializer
+    queryset = Ledger.objects.all()
+    serializer_class = LedgerSerializer

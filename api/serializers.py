@@ -1,8 +1,8 @@
-from dashboard.models import Registros
+from ledger.models import Ledger
 from rest_framework import serializers
 
 
-class RegistrosSerializer(serializers.HyperlinkedModelSerializer):
+class LedgerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Registros
+        model = Ledger
         fields = ['data', 'quem', 'origem', 'valor']
