@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Registros(models.Model):
+class Ledger(models.Model):
     ESCOLHAS = (
         ("Paypal", "paypal"),
         ("Caixa", "caixa"),
@@ -14,4 +14,3 @@ class Registros(models.Model):
 
     def __str__(self):
         return f"{self.quem} doou {self.valor} via {self.origem}"
-

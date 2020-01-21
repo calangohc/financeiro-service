@@ -22,14 +22,12 @@ from rest_framework import routers
 from api import views
 
 router = routers.DefaultRouter()
-router.register(r'registros', views.RegistrosViewSet)
+router.register(r'ledger', views.LedgerViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('dashboard.urls')),
-#     path('', include('extrator.urls')),
 
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
