@@ -5,7 +5,7 @@ class Ledger(models.Model):
     ESCOLHAS = (
         ("Paypal", "paypal"),
         ("Caixa", "caixa"),
-        ("Mercado pago", "mercado pago")
+        ("Mercado pago", "mercado_pago")
     )
     data = models.DateField()
     quem = models.CharField(max_length=30)

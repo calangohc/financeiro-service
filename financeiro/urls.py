@@ -19,18 +19,18 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 from rest_framework import routers
-from api import views
+
+from ledger.views import LedgerViewSet
+from extrator.views import DocumentViewSet
+
 
 router = routers.DefaultRouter()
-router.register(r'ledger', views.LedgerViewSet)
+router.register(r'ledger', LedgerViewSet)
+router.register(r'document', DocumentViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('', include(router.urls))
 ]
-
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

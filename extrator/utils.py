@@ -6,6 +6,10 @@ from django.conf import settings
 from django.utils.deconstruct import deconstructible
 
 
+def parse_document(filename):
+    pass
+
+
 @deconstructible
 class PathRename(object):
 
